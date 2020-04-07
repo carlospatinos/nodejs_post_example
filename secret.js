@@ -12,9 +12,8 @@ const SANDBOX=process.env.SANDBOX;
 const ORG = process.env.ORG;
 const API_KEY = process.env.API_KEY;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
-
-console.log("---------------");
-console.log(PURE_CLOUD_TOKEN);
+const PURE_CLOUD_CREDENTIALS_ID = process.env.PURE_CLOUD_CREDENTIALS_ID;
+const PURE_CLOUD_CREDENTIALS_NAME = process.env.PURE_CLOUD_CREDENTIALS_NAME;
 
 const PRIVATE_KEY=process.env.PRIVATE_KEY;
 const PUBLIC_KEY=process.env.PUBLIC_KEY;
@@ -75,8 +74,8 @@ const adobeOps = {
                'Content-Type': 'application/json'
             }, 
             body: JSON.stringify({
-                  "id":"0e839bf1-1546-4c20-9637-f8f1de9a0397",
-                  "name":"Integration-Adobe-EXP-0e839bf1-1546-4c20-9637-f8f1de9a0397",
+                  "id":PURE_CLOUD_CREDENTIALS_ID,
+                  "name":PURE_CLOUD_CREDENTIALS_NAME,
                   "type":"userDefined",
                   "credentialFields":{
                      "authorization":"Bearer " + ADOBE_TOKEN,
